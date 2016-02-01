@@ -1,0 +1,143 @@
+<script src="assets/js/scripts.js"></script>
+
+<div class="slider-2-container photo-banner">
+</div>
+
+<div class="container body-width wow fadeInLeft animated">
+<!-- popular -->
+    <div class="row main-body">
+        <div class="col-sm-10 wow fadeInUp">
+            <div class="row">
+                <div class="popular-first-body">
+                    <img src="./assets/img/photos/clever.png" alt="" class="popular-first">
+                </div>
+                <div class="pop-up" ng-repeat="item in items">
+                    <img src="./assets/img/photos/clever.png" alt="" class="popular-photo">
+                </div>
+                <div class="popular-cover"></div>
+                <div class="popular-add"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row main-body">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8 menu-body bounce">
+            <div class="row form-margin-bottom">
+                <div class="col-md-2">
+                    <div class="row">
+                        <div class="form-dropdonw-position">
+                            <a class="dropdown-toggle non-back font-color cursor" type="" data-toggle="dropdown"><i class="fa fa-bars menu-icon-font"></i></a>
+                            <ul class="dropdown-menu dropdown-menu-right wow fadeInLeft">
+                              <li ng-repeat="submenu in submenus" ng-class="{'selected': isActive(submenu)}" ng-click="setActive(submenu)"><a >{{submenu}}</a></li>
+                            </ul>
+                        </div>
+                        <h4 class="form-title-first">Where</h4>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="row form-position">
+                        <span class="span-position glyphicon glyphicon-search"></span>
+                        <input type="text" class="form-input" placeholder="Search for snippets">
+                    </div>
+                </div>
+                <div class="col-md-2 icon-border-top">
+                    <div class="where-ico"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <h4 class="form-title">When</h4>
+                </div>
+                <div class="col-md-8 no-padding">
+                    <div id="paginator">
+                    </div>
+                </div>
+                <div class="col-md-2 icon-border-top">
+                    <div class="calendar-ico"></div> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <h4 class="form-title">What</h4>
+                </div>
+                <div class="col-md-8">
+                    <div class="row form-position">
+                        <span class="span-position glyphicon glyphicon-search"></span>
+                        <input type="text" class="form-input" placeholder="Search for snippets">
+                    </div>
+                    <span class="form-text">this is ...</span>
+                </div>
+            </div>
+            <div class="row">
+                
+            </div>
+            <div class="row back-blue">
+                <span class="form-text-top">this is ...</span>
+                <div class="btn-group view-mod col-sm-3">
+                    <button type="button" class="btn" ng-class="{active: amod}" ng-click="setNavActive('amod')"><span class="view-mod-span glyphicon glyphicon-option-vertical"></span></button>
+                    <button type="button" class="btn" ng-class="{active: bmod}" ng-click="setNavActive('bmod')"><span class="view-mod-span glyphicon glyphicon-menu-hamburger"></span></button>
+                </div>
+            </div>
+            <div class="row body-color">
+                <p class="sort-text col-sm-offset-7">Sort By</p>
+                <select class="form-control form-right wow fadeInLeft animated">
+                    <option>Popular By</option>
+                    <option>Liked By</option>
+                    <option>Rate by</option>                    
+                </select>
+            </div>
+            
+            <div class="row body-color wow fadeInRight" ng-repeat="photo in photos">
+                <div class="cell-photo wow flash">
+                    <!-- <a href="" class="" target="_blank" ng-click="gogridshow()"> -->
+                    <a href="" class="" target="_blank" ng-click="gogrid()">
+                    <img border="0" alt="Maturaball Akademisches Gymnasium" class="" src="./assets/img/photos/clever.png">
+                    </a>
+                </div>
+                <div class="cell-body text-left">
+                    <ul class="cell-hot">
+                        <img border="0" alt="" class="" src="./assets/img/photos/photo.hot.png" style="width:100%">
+                    </ul>
+                    <a href="" class="cell-title">This is first Test</a><br>
+                    <span>Sunday, 18. December 2015 PM 19:00
+                    </span></br>
+                    <span class=""> 
+                    @<a href="" title="Grazer Congress">Austria</a>, Vienna-Meidling<i class="font-small">(5450.71 km)</i> 
+                    </span></br>
+                    <span class="">
+                    <span class="glyphicon glyphicon-eye-open"></span>1541
+                    <span class="glyphicon glyphicon-camera"></span>157
+                    <span class="glyphicon glyphicon-heart"></span>54
+                    <span class="glyphicon glyphicon-comment"></span>8
+                    <i class="fa-facebook-square" style="font:18px/1 FontAwesome;"></i>
+                    <i class="fa-twitter-square" style="font:18px/1 FontAwesome;"></i>
+                    <i class="fa-google-plus-square" style="font:18px/1 FontAwesome;"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span>4 days ago</span>
+                </div>                
+            </div>
+        </div>
+        <div class="col-md-2 wow fadeInRightBig">
+            <img border="0" alt="Gymnasium" class="lazy-load " src="./assets/img/photos/ad(1).jpg" style="width:100%;margin-bottom:10px">
+            <img border="0" alt="Gymnasium" class="lazy-load" src="./assets/img/photos/ad(2).jpg" style="width:100%;margin-bottom:10px">
+            <img border="0" alt="Gymnasium" class="lazy-load" src="./assets/img/photos/ad(3).jpg" style="width:100%;margin-bottom:10px">
+            <img border="0" alt="Gymnasium" class="lazy-load" src="./assets/img/photos/ad(1).jpg" style="width:100%;margin-bottom:10px">
+            <img border="0" alt="Gymnasium" class="lazy-load" src="./assets/img/photos/ad(1).jpg" style="width:100%;margin-bottom:10px">
+        </div>
+    </div>
+    <div class="row" style="text-align:center">
+        <ul class="pager">
+            <li><a href="" class="footer-color">Show More</a></li>            
+        </ul>
+    </div>
+</div>
+<!-- end section 54-->
+<div class="clearfix"></div>
+
+
+<script type="text/javascript">
+    $(function() {
+        $('#paginator').datepaginator();
+    $('#paginator-start-end').datepaginator({selectedDate:'2013-11-05',startDate:'2013-11-01',endDate:'2013-11-30'});
+    });
+
+</script>

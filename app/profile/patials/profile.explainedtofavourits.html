@@ -1,0 +1,48 @@
+
+<div class="col-sm-9">
+    <div class="row user-mainbody">
+        <div class="col-sm-4" ng-repeat="user in onusers">
+            <div class=" user-body">
+                <div class="user-photo">
+                    <img src="./assets/img/environment/clever.png" alt="">
+                </div>
+                <div class="user-hover-pro">
+                    <div class="user-hover-name">
+                        <span>Name</span>
+                        <span>37</span>
+                        <i class="fa fa-circle online"></i>
+                    </div><br>
+                    <span class="user-hover-location">Location</span><br>
+                    <span class="user-hover-date">Date</span>
+                </div>
+            </div>        
+        </div>
+    </div>
+</div>
+<div class="col-sm-3 text-center">
+   <span>Your Profile</span>
+    <div class="gauge1">
+        <canvas id="canvas_rate" width="130" height="75">
+        Your browser does not support HTML5 Canvas.
+        </canvas>
+        <img id = "gauge_needle" src = "./assets/js/gauge/img/needle_1.png"/>
+        <span>50%</span>
+    </div>
+
+    <div class="gauge2">
+        <h2 id = "profile">249</h2>
+        <h2 id = "profile_letter">Name</h2>
+        <canvas id="canvas_profile1" width="110" height="110">
+         Your browser does not support HTML5 Canvas.
+        </canvas>
+    </div>
+
+    <div class="gauge3">
+        <h2 id = "profile">76%</h2>
+        <h2 id = "profile_letter">Profile</h2>
+        <canvas id="canvas_profile2" width="110" height="110">
+         Your browser does not support HTML5 Canvas.
+        </canvas>
+    </div>
+    
+</div>

@@ -1,0 +1,179 @@
+<!-- <script src="./assets/js/gauge/js/profile_meter.js"></script> -->
+<div class="col-sm-9 chat-body">
+    <div class="row" style="height:100%">
+        <!-- people list -->
+        <div class="col-sm-4 nopadding" style="height:100%">
+            <div class="char-contact-body">
+                <div class="row chat-title">
+                    <h4 class="chat-contact-title">Message</h4>
+                    <i class="fa fa-star" style="margin:14px 10px 16px 14px;"></i>
+                </div>
+                <div class="row nomargin chat-contact-cell" ng-repeat="contact in contacts" ng-click="setcontactActive(contact)" ng-class="{'active': iscontactActive(contact)}">
+                    <div class="friend-list-photo">
+                        <img class="img-circle" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_01.jpg" alt="avatar" />
+                        <i class="fa fa-circle online online-position"></i>
+                    </div>
+                    <div class="friend-list-name">
+                        <div class="chat-name">Name
+                            <span>Date</span>
+                            <div class="unread-position">
+                                <span class="badge">3</span>
+                            </div>
+                        </div>
+                        <br>
+                        <div>
+                            <span>Message Content</span>
+                            <span class="chat-checked"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- char search -->
+            <div class="input-group chat-search" id="adv-search">
+                <input type="text" class="menu-search-form form-control chat-input-back" placeholder="Search for snippets">
+                <span class="friend-search-ico glyphicon glyphicon-search" aria-hidden="true"></span>
+            </div>
+        </div>
+        <!-- chat content -->
+        <div class="col-sm-8 chat chat-history-body">
+            <!-- chat header -->
+            <div class="chat-header clearfix text-left">
+                <div class="chat-with">Chat with Vincent Porter</div>
+                <i class="fa fa-circle me"></i>
+            </div>
+            <!-- end chat-header -->
+            <div class="chat-history">
+                <div class="message-body row">
+                    <div class="chat-other-photo">
+                        <img class="img-circle" src="./assets/img/profile/clever.png" alt="">
+                    </div>
+                    <div class="message other-message pull-right">
+                        Well I am not sure.Have you faced any problems at the last phase of the project?
+                    </div>
+                    <span class="other-message-data-time">10:14 AM</span>
+                    <span class="other-message-data-name">Olia</span>
+                </div>
+                <div class="message-body row">
+                    <div class="chat-my-photo">
+                        <img class="img-circle" src="./assets/img/profile/clever.png" alt="">
+                    </div>
+                    <div class="message my-message pull-left">
+                        Actually everything was fine. I'm very excited to show this to our team.
+                    </div>
+                    <span class="my-message-data-time">10:14 AM</span>
+                    <span class="my-message-data-name">Olia</span>
+                </div>
+                <div>
+                    <i class="fa fa-circle online"></i>
+                    <i class="fa fa-circle online" style="color: #AED2A6"></i>
+                    <i class="fa fa-circle online" style="color:#DAE9DA"></i>
+                </div>
+            </div>
+            <!-- end chat-history -->
+            <div class="">
+                <input type="text" class="form-control input-message" placeholder="Enter Message">
+                <button type="submit" class="send-btn btn btn-primary">Send</button>
+            </div>
+            <div class="col-sm-10">
+                <span class="glyphicon glyphicon-picture chat-add-photo1">Add Photo </span>
+                <span class="glyphicon glyphicon-time chat-add-photo1">Add Photo</span>
+                <div class="checkbox chat-enter">
+                    <label>
+                        <input type="checkbox" value="" class="">Using Enter</label>
+                </div>
+            </div>
+            <!-- end chat-message -->
+        </div>
+        <!-- end chat -->
+    </div>
+    <!-- end container -->
+</div>
+<div class="col-sm-3 text-center">
+    <span>Your Profile</span>
+    <div class="gauge1">
+        <canvas id="canvas_rate" width="130" height="75">
+            Your browser does not support HTML5 Canvas.
+        </canvas>
+        <img id="gauge_needle" src="./assets/js/gauge/img/needle_1.png" />
+        <span>50%</span>
+    </div>
+    <div class="gauge3">
+        <h2 id="profile">76%</h2>
+        <h2 id="profile_letter">Profile</h2>
+        <canvas id="canvas_profile2" width="110" height="110">
+            Your browser does not support HTML5 Canvas.
+        </canvas>
+    </div>
+    <div class="pro-friend-info-back text-center">
+        <span>Made new friends</span>
+        <br>
+        <span class="pro-between"></span>
+        <br>
+        <span>Eurolife.at</span>
+        <br>
+        <span class="pro-between"></span>
+        <br>
+        <span>ein</span>
+        <br>
+        <span class="pro-between"></span>
+        <br>
+        <ul class="pager">
+            <li><a href="" class="footer-color" data-toggle="modal" data-target="#myModal">Show More</a></li>
+        </ul>
+    </div>
+</div>
+<!-- <button type="button" class="btn btn-info btn-lg" >Open Modal</button> -->
+<!--credits Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="cmodal-body">
+                <div class="cmodal-head">
+                    <div class="cmodal-title">
+                        <span>Dein Punkte Guthaben</span>
+                        <div class="cmodal-num-body">
+                            <div class="cmodal-num">19.999</div>
+                        </div>
+                        <div class="cmodal-rec">
+                            <span>Punktekonto Aufladen!</span>
+                        </div>
+                        <span class="cmodal-h-t">Lerne mit Eurolife.at Punkten mehr Frauen kennen</span>
+                    </div>
+                </div>
+                <div class="cmodal-female-body">
+                    <div class="cmodal-female">
+                        <div class="cmodal-back">
+                            <div class="cmodal-g1"></div>
+                        </div>
+                        <div class="cmodal-fe-w">
+                            <span>Wer en vederf ofer ofe</span>
+                        </div>
+                        <span>This is female comments.Please show detail.</span>
+                    </div>
+                    <div class="cmodal-female">
+                        <div class="cmodal-back">
+                            <div class="cmodal-g2"></div>
+                        </div>
+                        <div class="cmodal-fe-w">
+                            <span>Wer en vederf ofer ofe</span>
+                        </div>
+                        <span>This is female comments.Please show detail.</span>
+                    </div>
+                </div>
+                <div class="cmodal-gift-body">
+                    <div class="cmodal-gf">
+                        <div class="cmodal-gf1"></div>
+                        <span>This is cmodal pannel.you can see more before.</span>
+                    </div>
+                    <div class="cmodal-gf">
+                        <div class="cmodal-gf2"></div>
+                        <span>This is cmodal pannel.you can see more before.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>

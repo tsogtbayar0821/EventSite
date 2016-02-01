@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EventSite-Eurolife.at</title>
+    <!-- CSS -->
+    <!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400"> -->
+    <!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans"> -->
+    <!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster"> -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/flexslider/flexslider.css">
+    <link rel="stylesheet" href="./assets/css/form-elements.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media-queries.css">
+    <!-- custom -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/logo_ico.png">
+    <!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"> -->
+    <!-- <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"> -->
+    <!-- <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"> -->
+    <!-- <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"> -->
+    <!-- carousel -->
+    <link rel='stylesheet prefetch' href='./assets/css/lightslider.css'>
+    <!-- slider -->
+    <link rel="stylesheet" href="./assets/js/slider/angular-slider.css" type="text/css" media="screen" />
+    <!-- gauge -->
+    <link rel="stylesheet" href="./assets/js/gauge/css/profile.css" />
+    <!-- Javascript -->
+    <!-- // <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> -->
+    <script src="assets/js/jquery-1.11.1.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap-hover-dropdown.min.js"></script>
+    <script src="assets/js/jquery.backstretch.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/retina-1.1.0.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/flexslider/jquery.flexslider-min.js"></script>
+    <script src="assets/js/jflickrfeed.min.js"></script>
+    <script src="assets/js/masonry.pkgd.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="assets/js/jquery.ui.map.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <!-- angularjs -->
+    <script src="./assets/vendor/angular.min.js"></script>
+    <script src="./assets/vendor/angular-ui-router.js"></script>
+    <!-- slider -->
+    <script type="text/javascript" src="./assets/js/slider/angular-slider.js"></script>
+
+
+    <!-- controller -->
+    <script src="./app/app.js"></script>
+    <script src="./app/global.js"></script>
+    <script src="./main.Ctl.js"></script>
+    <script src="./app/bell/bell.Ctl.js"></script>
+    <script src="./app/discover/discover.Ctl.js"></script>
+    <script src="./app/events/events.Ctl.js"></script>
+    <script src="./app/gift1/gift1.Ctl.js"></script>
+    <script src="./app/gift2/gift2.Ctl.js"></script>
+    <script src="./app/hotel/hotel.Ctl.js"></script>
+    <script src="./app/location/location.Ctl.js"></script>
+    <script src="./app/message/message.Ctl.js"></script>
+    <script src="./app/music/music.Ctl.js"></script>
+    <script src="./app/photos/photos.Ctl.js"></script>
+    <script src="./app/profile/profile.Ctl.js"></script>
+    <script src="./app/restauraunt/restauraunt.Ctl.js"></script>
+    <script src="./assets/js/gotop.js"></script>
+
+    <!-- factory -->
+    <script type="text/javascript" src="./app/factory/photo.factory.js"></script>
+    <script type="text/javascript" src="./app/factory/environment.factory.js"></script>
+    <script type="text/javascript" src="./app/factory/profile.factory.js"></script>
+
+    <!-- // scroll -->
+    <!-- // <script src="./assets/js/scroll.js"></script> -->
+    <!-- date picker -->
+    <link rel="stylesheet" type="text/css" href="./assets/js/datepicker/bootstrap-datepaginator.css">
+    <script type="text/javascript" src="./assets/js/datepicker/moment.js"></script>
+    <script type="text/javascript" src="./assets/js/datepicker/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="./assets/js/datepicker/bootstrap-datepaginator.js"></script>
+    <!-- gauge -->
+    <script src="./assets/js/gauge/js/modernizr-2.6.2.min.js"></script>
+    <!-- // <script src="./assets/js/gauge/js/profile_meter.js"></script> -->
+    <!-- angular js slider -->
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
+    <!-- ANGULAR ui slider -->
+    <link rel="stylesheet" type="text/css" href="./assets/js/angular-ui-slider/jquery-ui.css">
+    <script type="text/javascript" src="./assets/js/angular-ui-slider/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./assets/js/angular-ui-slider/slider.js"></script>
+</head>
+
+<body ng-controller="MainController">
+    <!-- Top menu -->
+    <nav class="navbar" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse zoom-nav" id="top-navbar-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="border" ng-class="{active: discover}" ng-click="setNavActive('discover')">
+                        <a href="">
+                            <div class="menu-environment"></div>Discover</a>
+                    </li>
+                    <li class="border" ng-class="{active: events}" ng-click="setNavActive('events')">
+                        <a href="">
+                            <div class="menu-event"></div>Events</a>
+                    </li>
+                    <li class="border" ng-class="{active: location}" ng-click="setNavActive('location')">
+                        <a href="">
+                            <div class="menu-location"></div>Location</a>
+                    </li>
+                    <li class="border" ng-class="{active: photos}" ng-click="setNavActive('photos')">
+                        <a href="">
+                            <div class="menu-photos"></div>Photos</a>
+                    </li>
+                    <li class="yamm-fw border" ng-class="{active: music}" ng-click="setNavActive('music')">
+                        <a href="">
+                            <div class="menu-music"></div>Music</a>
+                    </li>
+                    <!--end elements styles-->
+                    <li class="border" ng-class="{active: hotel}" ng-click="setNavActive('hotel')">
+                        <a href="" class="dropdown-toggle">
+                            <div class="menu-hotel"></div>Hotel</a>
+                    </li>
+                    <li class="border-right" ng-class="{active: restauraunt}" ng-click="setNavActive('restauraunt')">
+                        <a href="">
+                            <div class="menu-restauraunt"></div>Restaurant</a>
+                    </li>
+                    <!--  -->
+                    <li class="nav-credit">
+                        <span>1520 credits</span>
+                    </li>
+                    <li class="circle">
+                        <div></div>
+                        <img src="./assets/img/clever.png" class="img-circle nav-photo">
+                        <span class="menu-name">name</span>
+                    </li>
+                    <!--  -->
+                    <li class="" ng-class="{active: bell}" ng-click="setNavActive('bell')">
+                        <a href="">
+                            <div class="menu-bell"><span class="badge">5</span></div>
+                        </a>
+                    </li>
+                    <li class="" ng-class="{active: message}" ng-click="setNavActive('message')">
+                        <a href="">
+                            <div class="menu-message"><span class="badge">5</span></div>
+                        </a>
+                    </li>
+                    <li class="" ng-class="{active: gift1}" ng-click="setNavActive('gift1')">
+                        <a href="">
+                            <div class="menu-gift1"></div>
+                        </a>
+                    </li>
+                    <li class="" ng-class="{active: gift2}" ng-click="setNavActive('gift2')">
+                        <a href="">
+                            <div class="menu-gift2"></div>
+                        </a>
+                    </li>
+                    <li class="" ng-class="{active: profilehome}" ng-click="setNavActive('profilehome')">
+                        <a href="">
+                            <div class="menu-profilehome"></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- main view -->
+    <div class="body-color" ui-view></div>
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-width">
+            <div class="row">
+                <a class="footer-logo" href=""></a>
+            </div>
+            <div class="row">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-3 footer-menu1">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <i class="f4 fa fa-apple"></i><a href="" class="footer-color" ng-click="footerApple()">Eurolife.at for iPhone</a>
+                                    <br>
+                                    <div href="" class="footer-color" ng-repeat="submenu in menu1" ng-click="footer(submenu)">{{submenu}}
+                                        <br>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <i class="f4 fa fa-android"></i><a href="" class="footer-color" ng-click="footerAndroid()">Eurolife.at for Android</a>
+                                    <br>
+                                    <div href="" class="footer-color" ng-repeat="submenu in menu2" ng-click="footer(submenu)">{{submenu}}
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <a href="" class="footer-color h4">COMPANY</a>
+                            <br>
+                            <div href="" class="footer-color" ng-repeat="submenu in menu3" ng-click="footer(submenu)">{{submenu}}
+                                <br>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <a href="" class="footer-color h4">CONTACT</a>
+                            <br>
+                            <div href="" class="footer-color" ng-repeat="submenu in menu4" ng-click="footer(submenu)">{{submenu}}
+                                <br>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <a href="" class="footer-color h4">JUST COMPLETELY Liebhaben</a>
+                            <br>
+                            <div href="" class="footer-color" ng-repeat="submenu in menu5" ng-click="footer(submenu)">{{submenu}}
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-7">
+                    <p class="pull-right">©Eurolife.at,2015. All rights reserved.</p>
+                </div>
+                <div class="col-sm-5">
+                    <p>Made with <i class="fa fa-heart main-color"></i> in Austria</p>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="scrollup"></a>
+    </footer>
+    <script src='http://sachinchoolur.github.io/lightslider/dist/js/lightslider.js'></script>
+    <script src="./assets/js/carousel.js"></script>
+</body>
+
+</html>

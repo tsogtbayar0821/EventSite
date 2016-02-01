@@ -1,0 +1,72 @@
+<script src="assets/js/scripts.js"></script>
+
+<div class="slider-2-container photo-banner">
+</div>
+
+<!--end header medium-->
+<div class="clearfix"></div>
+<!--end pagenation-->
+<div class="clearfix"></div>
+<div class="container body-width wow fadeInLeft">
+    <!-- popular -->
+    <div class="row main-body">
+        <div class="col-sm-10 wow fadeInUp">
+            <div class="row">
+                <div class="popular-first-body">
+                    <img src="./assets/img/photos/clever.png" alt="" class="popular-first">
+                </div>
+                <div class="pop-up" ng-repeat="item in items">
+                    <img src="./assets/img/photos/clever.png" alt="" class="popular-photo">
+                </div>
+                <div class="popular-cover"></div>
+                <div class="popular-add"></div>
+            </div>
+        </div>
+    </div>    
+    <div class="row" style="margin-top:20px">
+        <div class="col-sm-2">
+            <div class="menu-body">
+                <li class="profile-menu menu_button" ng-repeat="profilemenu in profilemenus" ng-class="{'selected': isActive(profilemenu)}" ng-click="setActive(profilemenu)">{{profilemenu}}</li>
+            </div>
+            <div class="profile-nextmenu">
+                <li class="profile-menu menu_button" ng-repeat="profilenextmenu in profilenextmenus" ng-class="{'selected': isActive(profilenextmenu)}" ng-click="setActive(profilenextmenu)">{{profilenextmenu}}</li>
+            </div>
+            <!-- friend parts -->
+            <div class="pro-home-friend-body" ng-style="friendStyle">
+                <div class="online-friend-search-body">   
+                    <!--online friend search -->                
+                    <input type="text" class="friend-search-form" placeholder="Search">
+                    <span class="friend-search-ico glyphicon glyphicon-search" aria-hidden="true"></span>
+                </div>
+                <div class="nomargin title-body">
+                    <h5>Online Friends</h5>
+                </div>
+                <!-- people list -->
+                <div class="row nomargin friend-list-body" ng-repeat="contact in contacts" ng-click="setcontactActive(contact)" ng-class="{'active': iscontactActive(contact)}">
+                    <div class="friend-list-photo">
+                        <img class="img-circle" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_01.jpg" alt="avatar" />
+                        <i class="fa fa-circle online online-position"></i>
+                    </div>
+                    <div class="friend-list-name">
+                        <div class="friend-name">Vincent Porter</div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div ui-view class="col-sm-10">
+            
+        </div>        
+        
+    </div>
+    <div class="row" style="text-align:center">
+        <ul class="pager">
+            <li><a href="">Show More</a></li>            
+          </ul>
+    </div>
+
+</div>
+
+<!-- end section 54-->
+<div class="clearfix"></div>
+

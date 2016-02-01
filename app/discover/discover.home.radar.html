@@ -1,0 +1,24 @@
+<div class="col-sm-12 radar_back-stye">
+    <div class="">
+        <span class="fa fa-circle radar-point" ng-init="insert(user)" ng-style="point" ng-repeat="user in users">{{user.x}}</span></br>
+    </div>
+    <div class="radar-photo">
+        <img src="./assets/img/environment/clever.png" class="img-circle" alt="">
+    </div>
+</div>
+<div class="col-sm-12">
+    <div class="slider-mark">
+        <span>Distance</span>
+    </div>
+    <div class="radar-slider">
+        <div class="slider-box" ng-app>
+            <div class="percentage-cur" ng-init="selectedRange=0">
+                <span class="num">{{ selectedRange }}</span>
+            </div>
+            <div class="slider-bar slider-bar-slider">
+                <input class="slider-slider" type="range" min="0" max="100" ng-model="selectedRange">
+                <div class="inner" ng-style="{ width: selectedRange + '%' || '0%' }"></div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+<div class="each-carousel">
+  <div class="col-sm-11 each-back">
+    <div class="each-love">
+      <span class="glyphicon glyphicon-heart"></span>
+    </div>
+    <div class="each-del">
+      <span class="glyphicon glyphicon-remove"></span>
+    </div>
+    <div class="each-title">
+      <i class="fa fa-circle"></i>
+      <span>Name</span><span>, 21</span>
+      <span class="eche-verify"></span>
+      <i class="fa fa-mobile"></i>
+    </div>
+    <div class="each-icon">
+      <span class="glyphicon glyphicon-share"></span>
+      <span class="each-book"></span>
+    </div>
+  </div>
+  <div class="col-sm-11">
+    <div id="slides_control">
+        <div>
+            <carousel interval="myInterval">
+                <slide ng-repeat="slide in slides" active="slide.active">
+                    <img ng-src="{{slide.image}}">
+                    <div class="carousel-caption">
+                        <h4>Slide {{$index+1}}</h4>
+                    </div>
+                </slide>
+            </carousel>
+        </div>
+    </div>
+  </div>
+  <div class="each-num">
+    <span class=""></span>
+    <span>1/</span>
+    <span>8</span>
+  </div>
+  <div class="col-sm-11 each-friend-btn-body">
+    <div class="each-friend-btn">Invite</div>  
+  </div>
+  <span class="font-b-17">Using keyBoard</span>
+  <div class="col-sm-11 each-key-body">
+    <span>Yes</span>
+    <div class="each-prev"></div>
+    <span>Or</span>
+    <div class="each-next"></div>
+    <span>No</span>
+  </div>
+</div>
+<div class="each-friends">
+  <div class="" ng-repeat="friend in friends">
+    <img src="./assets/img/clever.png" alt="" class="each-friphoto active img-circle">
+  </div>
+</div>

@@ -1,0 +1,505 @@
+<div class="row">
+    <div class="col-sm-9">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="row">
+                    <img class="profile-img" src="./assets/img/profile/clever.png">
+                </div>
+                <div class="row  menu-body">
+                    <div class="col-sm-3" ng-repeat="youruploadimg in youruploadimgs">
+                        <img class="profile-img" src="./assets/img/profile/clever.png">
+                    </div>
+                    <div class="edit-profilepicture">
+                        <a href="">Edit profile picture</a>
+                    </div>
+                </div>
+                <div class="row facebook-body">
+                    <span class="fa-facebook menu-icon-font"></span>
+                    <a href="">Upload a photo</a>
+                </div>
+            </div>
+            <div class="col-sm-6 text-left">
+                <div class="" style="padding-left:10px">
+                    <div class="row">
+                        <div class="profile-name">
+                            <span>name, age</span>
+                        </div>
+                    </div>
+                    <div class="row pro-user-body">
+                        <div class="pro-user">
+                            <div class="profile-icon-lo"></div>
+                            <span>Your location</span>
+                        </div>
+                        <div class="pro-user">
+                            <div class="fa fa-circle online"></div>
+                            <span>Online state</span>
+                        </div>
+                        <div class="pro-user">
+                            <div class="profile-icon-verify"></div>
+                            <span>Verify number</span>
+                        </div>
+                    </div>
+                    <div class="row menu-body">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a ng-click="settabActive('info')">Info</a></li>
+                            <li><a ng-click="settabActive('personalinfo')">Personal Info</a></li>
+                            <li><a ng-click="settabActive('yourinfo')">Your Info</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="home" class="tab-pane fade in" ng-class="{'active': istabActive('info')}">
+                                <h3>HOME</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, <a data-toggle="modal" data-target="#settingModal">Complet Your Profile</a> incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                            <div id="menu1" class="tab-pane fade in" ng-class="{'active': istabActive('personalinfo')}">
+                                <h3>Menu 1</h3>
+                                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                            <div id="menu1" class="tab-pane fade in" ng-class="{'active': istabActive('yourinfo')}">
+                                <h3>Menu 2</h3>
+                                <p>nisi ut aliquip ex ea commodo consequatUt enim ad minim veniam, quis nostrud exercitation ullamco laboris .</p>
+                            </div>
+                        </div>
+                        <script>
+                        $(document).ready(function() {
+                            $(".nav-tabs a").click(function() {
+                                $(this).tab('show');
+                            });
+                        });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3 text-center">
+        <span>Your Profile</span>
+        <div class="gauge1">
+            <canvas id="canvas_rate" width="130" height="75">
+                Your browser does not support HTML5 Canvas.
+            </canvas>
+            <img id="gauge_needle" src="./assets/js/gauge/img/needle_1.png" />
+            <span>50%</span>
+        </div>
+        <div class="gauge2">
+            <h2 id="profile">249</h2>
+            <h2 id="profile_letter">Name</h2>
+            <canvas id="canvas_profile1" width="110" height="110">
+                Your browser does not support HTML5 Canvas.
+            </canvas>
+        </div>
+        <div class="gauge3">
+            <h2 id="profile">76%</h2>
+            <h2 id="profile_letter">Profile</h2>
+            <canvas id="canvas_profile2" width="110" height="110">
+                Your browser does not support HTML5 Canvas.
+            </canvas>
+        </div>
+    </div>
+</div>
+<!-- setting modal body -->
+<div class="modal fade" id="settingModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="col-sm-4">
+            <div class="set-m-header"></div>
+            <div class="set-m-text-body">
+                <span>This is what</span>
+                <textarea name="" class="set-m-text"></textarea>
+                <div class="set-m-btn"><span>save</span></div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="set-m-header"><span>Setting Menu</span></div>
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="set-head" data-parent="#accordion" href="_self#collapse1" data-toggle="collapse">Menu1
+                        <div class="set-head-ico">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                            <span class="glyphicon glyphicon-chevron-up"></span>
+                        </div>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <div class="set-input-form">
+                                <input style="text">
+                                <span class=""></span>
+                            </div>
+                            <div class="set-m-btn"><span>save</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="set-head" data-parent="#accordion" href="_self#collapse2" data-toggle="collapse">Menu2
+                        <div class="set-head-ico">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                            <span class="glyphicon glyphicon-chevron-up"></span>
+                        </div>
+                    </div>
+                    <div id="collapse2" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <h5>select sex</h5>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="">Male</label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="">Female</label>
+                            </div>
+                            <!-- age slider -->
+                            <h5>select age</h5>
+                            <div class="ng-scope">
+                                <div ui-slider="{range: true}" min="0" max="100" step="0.01" use-decimals ng-model="demoVals.sliderExample7"></div>
+                                <input type="text" ng-model="demoVals.sliderExample7" />
+                            </div>
+                            <div class="set-m-btn"><span>save</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="set-head" data-parent="#accordion" href="_self#collapse3" data-toggle="collapse">Menu3
+                        <div class="set-head-ico">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                            <span class="glyphicon glyphicon-chevron-up"></span>
+                        </div>
+                    </div>
+                    <div id="collapse3" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="set-m3">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="">Male</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="">Male</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="">Male</label>
+                                </div>
+                            </div>
+                            <div class="set-m-btn"><span>save</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="set-head" data-parent="#accordion" href="_self#collapse4" data-toggle="collapse">Menu4
+                        <div class="set-head-ico">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                            <span class="glyphicon glyphicon-chevron-up"></span>
+                        </div>
+                    </div>
+                    <div id="collapse4" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="set-m-4">
+                                <span>This is option</span>
+                                <div id="kind">
+                                    <div id="current_selection" class="kind_selection">:nth-child</div>
+                                    <div id="kind_arrow" class="selection_arrows">
+                                        <span class="top_arrow">▲</span>
+                                        <span class="bottom_arrow">▼</span>
+                                    </div>
+                                    <ul id="kind_options" class="selection_options">
+                                        <li data-value=":nth-child" class="selected">:nth-child</li>
+                                        <li data-value=":nth-of-type">:nth-of-type</li>
+                                        <li data-value=":nth-last-child">:nth-last-child</li>
+                                        <li data-value=":nth-last-of-type">:nth-last-of-type</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="set-m-btn"><span>save</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="set-head" data-parent="#accordion" href="_self#collapse5" data-toggle="collapse">Menu5
+                        <div class="set-head-ico">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                            <span class="glyphicon glyphicon-chevron-up"></span>
+                        </div>
+                    </div>
+                    <div id="collapse5" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optradio">Option 1</label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optradio">Option 2</label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optradio">Option 3</label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optradio">Option 4</label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optradio">Option 5</label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optradio">Option 6</label>
+                            </div>
+                        </div>
+                        <div class="set-m-btn"><span>save</span></div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="set-head" data-parent="#accordion" href="_self#collapse6" data-toggle="collapse">Menu6
+                        <div class="set-head-ico">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                            <span class="glyphicon glyphicon-chevron-up"></span>
+                        </div>
+                    </div>
+                    <div id="collapse6" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="set-m-6">
+                                <span class="">Select1</span>
+                                <select name="" class="set-sel">
+                                    <option value="">option1</option>
+                                    <option value="">option2</option>
+                                    <option value="">option3</option>
+                                </select>
+                            </div>
+                            <div class="set-m-6">
+                                <span class="">Select2</span>
+                                <select name="" class="set-sel">
+                                    <option value="">option1</option>
+                                    <option value="">option2</option>
+                                    <option value="">option3</option>
+                                </select>
+                            </div>
+                            <div class="set-m-6">
+                                <span class="">Select3</span>
+                                <select name="" class="set-sel">
+                                    <option value="">option1</option>
+                                    <option value="">option2</option>
+                                    <option value="">option3</option>
+                                </select>
+                            </div>
+                            <div class="set-m-6">
+                                <span class="">Select4</span>
+                                <select name="" class="set-sel">
+                                    <option value="">option1</option>
+                                    <option value="">option2</option>
+                                    <option value="">option3</option>
+                                </select>
+                            </div>
+                            <div class="set-m-6">
+                                <span class="">Select5</span>
+                                <select name="" class="set-sel">
+                                    <option value="">option1</option>
+                                    <option value="">option2</option>
+                                    <option value="">option3</option>
+                                </select>
+                            </div>
+                            <div class="set-m-6">
+                                <span class="">Select6</span>
+                                <select name="" class="set-sel">
+                                    <option value="">option1</option>
+                                    <option value="">option2</option>
+                                    <option value="">option3</option>
+                                </select>
+                            </div>
+                            <div class="set-m-btn"><span>save</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="set-head" data-parent="#accordion" href="_self#collapse7" data-toggle="collapse">Menu7
+                        <div class="set-head-ico">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                            <span class="glyphicon glyphicon-chevron-up"></span>
+                        </div>
+                    </div>
+                    <div id="collapse7" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="">
+                                <span class=""></span>
+                                <select name="" class="set-sel">
+                                    <option value="">option1</option>
+                                    <option value="">option2</option>
+                                    <option value="">option3</option>
+                                </select>
+                            </div>
+                            <div class="set-m-btn"><span>save</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="set-head" data-parent="#accordion" href="_self#collapse8" data-toggle="collapse">Menu8
+                        <div class="set-head-ico">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                            <span class="glyphicon glyphicon-chevron-up"></span>
+                        </div>
+                    </div>
+                    <div id="collapse8" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="">
+                                <span class=""></span>
+                                <select name="" class="set-sel">
+                                    <option value="">option1</option>
+                                    <option value="">option2</option>
+                                    <option value="">option3</option>
+                                </select>
+                            </div>
+                            <div class="set-m-btn"><span>save</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="set-head" data-parent="#accordion" href="_self#collapse9" data-toggle="collapse">Menu9
+                        <div class="set-head-ico">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                            <span class="glyphicon glyphicon-chevron-up"></span>
+                        </div>
+                    </div>
+                    <div id="collapse9" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="">
+                                <span class=""></span>
+                                <select name="" class="set-sel">
+                                    <option value="">option1</option>
+                                    <option value="">option2</option>
+                                    <option value="">option3</option>
+                                </select>
+                            </div>
+                            <div class="set-m-btn"><span>save</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="set-head" data-parent="#accordion" href="_self#collapse10" data-toggle="collapse">Menu10
+                        <div class="set-head-ico">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                            <span class="glyphicon glyphicon-chevron-up"></span>
+                        </div>
+                    </div>
+                    <div id="collapse10" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="">
+                                <span class=""></span>
+                                <select name="" class="set-sel">
+                                    <option value="">option1</option>
+                                    <option value="">option2</option>
+                                    <option value="">option3</option>
+                                </select>
+                            </div>
+                            <div class="set-m-btn"><span>save</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="set-head" data-parent="#accordion" href="_self#collapse11" data-toggle="collapse">Menu11
+                        <div class="set-head-ico">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                            <span class="glyphicon glyphicon-chevron-up"></span>
+                        </div>
+                    </div>
+                    <div id="collapse11" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="">
+                                <span class=""></span>
+                                <select name="" class="set-sel">
+                                    <option value="">option1</option>
+                                    <option value="">option2</option>
+                                    <option value="">option3</option>
+                                </select>
+                            </div>
+                            <div class="set-m-btn"><span>save</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="set-head" data-parent="#accordion" href="_self#collapse12" data-toggle="collapse">Menu12
+                        <div class="set-head-ico">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                            <span class="glyphicon glyphicon-chevron-up"></span>
+                        </div>
+                    </div>
+                    <div id="collapse12" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="">
+                                <span class=""></span>
+                                <select name="" class="set-sel">
+                                    <option value="">option1</option>
+                                    <option value="">option2</option>
+                                    <option value="">option3</option>
+                                </select>
+                            </div>
+                            <div class="set-m-btn"><span>save</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="set-head" data-parent="#accordion" href="_self#collapse13" data-toggle="collapse">Menu13
+                        <div class="set-head-ico">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                            <span class="glyphicon glyphicon-chevron-up"></span>
+                        </div>
+                    </div>
+                    <div id="collapse13" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="">
+                                <span class=""></span>
+                                <select name="" class="set-sel">
+                                    <option value="">option1</option>
+                                    <option value="">option2</option>
+                                    <option value="">option3</option>
+                                </select>
+                            </div>
+                            <div class="set-m-btn"><span>save</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="set-head" data-parent="#accordion" href="_self#collapse14" data-toggle="collapse">Menu14
+                        <div class="set-head-ico">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                            <span class="glyphicon glyphicon-chevron-up"></span>
+                        </div>
+                    </div>
+                    <div id="collapse14" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="">
+                                <span class=""></span>
+                                <select name="" class="set-sel">
+                                    <option value="">option1</option>
+                                    <option value="">option2</option>
+                                    <option value="">option3</option>
+                                </select>
+                            </div>
+                            <div class="set-m-btn"><span>save</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="set-head" data-parent="#accordion" href="_self#collapse15" data-toggle="collapse">Menu15
+                        <div class="set-head-ico">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                            <span class="glyphicon glyphicon-chevron-up"></span>
+                        </div>
+                    </div>
+                    <div id="collapse15" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <span class="">This is first sentence</span>
+                            <span class="">This is first sentence</span>
+                            <input type="text" name="" value="" placeholder="">
+                            <div class="set-m-verifi-btn"> verification</div>
+                            <div class="set-m-warning">
+                                <span class="glyphicon glyphicon-info-sign"></span>
+                                <span>This is warning sentence</span>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="set-m-btn"><span>save</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

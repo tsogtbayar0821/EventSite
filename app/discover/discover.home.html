@@ -1,0 +1,80 @@
+<script src="assets/js/scripts.js"></script>
+
+<div class="slider-2-container photo-banner">
+</div>
+
+<!--end header medium-->
+<div class="clearfix"></div>
+<!--end pagenation-->
+<div class="clearfix"></div>
+<div class="container body-width wow fadeInLeft animated">
+<!-- popular -->
+    <div class="row main-body">
+        <div class="col-sm-10 wow fadeInUp">
+            <div class="row">
+                <div class="popular-first-body">
+                    <img src="./assets/img/photos/clever.png" alt="" class="popular-first">
+                </div>
+                <div class="pop-up" ng-repeat="item in items">
+                    <img src="./assets/img/photos/clever.png" alt="" class="popular-photo">
+                </div>
+                <div class="popular-cover"></div>
+                <div class="popular-add"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row main-body">
+        <div class="col-sm-2">
+            <a ng-click="selectState('environment')" class="menu_button" ng-class="{active: environment}">Environment</a>
+            <a ng-click="selectState('liveradio')" class="menu_button" ng-class="{active: liveradio}">Live Radio</a>
+            <div class="menu-body">   
+                <!-- search -->                
+                <input type="text" class="form-control search-form" placeholder="Search for snippets">
+                <span class="searach-ico glyphicon glyphicon-search" aria-hidden="true"></span>
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <div ui-view></div>
+            
+        </div>        
+        <div class="col-sm-2 text-left menu-body">
+            <div class="menu-border">
+                <h5>select sex</h5>                
+                <div class="checkbox">
+                    <label><input type="checkbox" value="">Male</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="">Female</label>
+                </div>    
+            </div>
+        <!-- age slider -->
+            <div class="menu-border">
+                <h5>select age</h5>
+                <div ui-slider="{range: true}" min="-1.00" max="1.00" step="0.01" use-decimals ng-model="demoVals.sliderExample9"></div>
+                <input type="text" ng-model="demoVals.sliderExample9" /> 
+            </div>
+        <!-- location -->
+            <div class="menu-border">
+                <h5>Select Location</h5>
+                <input type="text" class="location-form form-control" placeholder="Where">
+                <span class="glyphicon glyphicon-send location-ico" aria-hidden="true"></span>
+            </div>
+        
+        <!-- position slider -->
+            <div class="menu-border">
+                <h5>select Distance</h5>
+                <div ui-slider="{range: 'max'}" ng-model="demoVals.sliderExample6"></div>
+                <input type="text" ng-model="demoVals.sliderExample6" />
+            </div> 
+            <div class="row">
+                <ul class="pager">
+                    <li><a href="">Show More<i class="fa fa-sort"></i></a></li>
+                  </ul>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<!-- end section 54-->
+<div class="clearfix"></div>
